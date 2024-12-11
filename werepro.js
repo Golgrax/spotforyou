@@ -6,3 +6,6 @@ $('a.brand,a.work-link,a.cta-link,a.credit-link,a.nav-link,a.txt-link,a.nav-bran
          window.location = goTo;
     },1000);       
 }); 
+
+
+
