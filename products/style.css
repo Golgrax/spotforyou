@@ -1,0 +1,156 @@
+/* Center the button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4; /* Neutral background */
+}
+
+/* Base RoselynSpark Button Design */
+.roselyn-spark-button {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, rgb(68, 56, 56), rgb(100, 91, 91));
+    border: 2px solid black;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+    position: absolute; /* Positioning it absolutely for free movement */
+    pointer-events: auto; /* Disable click interaction so JS can control position */
+    z-index: 10;
+    cursor: pointer;
+}
+
+/* Hover Effect: Slight scale, shadow, and color change */
+.roselyn-spark-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(90deg, #9c9999, #abadaa); /* Add a vibrant hover gradient */
+}
+
+/* Glow Effect Animation */
+@keyframes button-glow {
+    0% {
+        box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(255, 255, 0, 0.6);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+    }
+}
+
+.roselyn-spark-button:hover {
+    animation: button-glow 1.5s infinite; /* Glow effect on hover */
+}
+
+/* Pulsing Background Effect */
+.roselyn-spark-button.pulse {
+    animation: pulse-bg 2s infinite;
+}
+
+@keyframes pulse-bg {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+/* Sparkling Particle Effect */
+@keyframes spark-effect {
+    0%, 100% {
+        box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.8);
+    }
+}
+
+.roselyn-spark-button.spark {
+    animation: spark-effect 2s infinite;
+}
+
+/* Rotating Border Illusion */
+@keyframes rotating-border {
+    0% {
+        border-radius: 30px;
+        border: 2px solid #ff00ff;
+    }
+    50% {
+        border-radius: 50%;
+        border: 4px solid #00ffff;
+    }
+    100% {
+        border-radius: 30px;
+        border: 2px solid #ff00ff;
+    }
+}
+
+.roselyn-spark-button.illusion {
+    animation: rotating-border 3s infinite;
+}
+
+/* Gradient Wave Effect */
+@keyframes gradient-wave {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.roselyn-spark-button.wave {
+    background: linear-gradient(270deg, #ff7eb3, #ff758c, #ff5964, #ff006e);
+    background-size: 400% 400%;
+    animation: gradient-wave 5s ease infinite;
+}
+
+/* Floating Effect */
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.roselyn-spark-button.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+/* Shadow Expansion Effect */
+@keyframes shadow-expand {
+    0% {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.roselyn-spark-button.expand-shadow {
+    animation: shadow-expand 4s infinite;
+}
